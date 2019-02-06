@@ -1,0 +1,18 @@
+<head>
+  <meta charset="utf-8" />
+  <script src="asset/jquery.js"></script>
+  <title>Exercice 6</title>
+</head>
+<body>
+  <label>nombre de cliques :</label>
+  <input id="showcount" value ="0"></input>
+  <input id="text" type="button" value ="clique"></input>
+<script>
+var count = 0;
+  $("#text").click(function() {
+    count++;
+    $("#showcount").val(count);
+  });
+</script>
+</body>
+</html>

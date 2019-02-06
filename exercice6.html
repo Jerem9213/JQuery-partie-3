@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<link rel="stylesheet" href="style.css" />
+<script src="asset/jquery.js"></script>
+<title>exercice 5</title>
+</head>
+<body>
+  <form>
+<input type="text" id="controler"/>
+<div class="circle">
+</form>
+</div>
+</div>
+<script type="text/javascript">
+$(function(){
+  // determine la hauteur et la hauteur de la fenetre
+  heightWindow=$(window).height();
+  widthWindow=$(window).width();
+  // permet de lancer une action lorsqu'on appuie sur une touche et qu'on est sur l'élement #champ
+  $('#controler').keydown(function(event) {
+    //determine la position horizontal de notre div
+    positionX=$('.circle').offset().left;
+    //la position vertical de notre div
+    positionY=$('.circle').offset().top;
+    switch(event.keyCode){
+      case 38:
+      if(positionY <= 0){
+      } else {
+        $('.circle').css('margin-top','-=10px');
+      }
+      break;
+      case 40:
+      if(positionY >= heightWindow -55){
+
+      } else {
+        $('.circle').css('margin-top','+=10px');
+      }
+      break;
+      case 37:
+      if(positionX <= 0){
+      } else {
+        $('.circle').css('margin-left','-=10px');
+      }
+      break;
+      case 39:
+      if(positionX >= widthWindow -55){
+      } else {
+        $('.circle').css('margin-left','+=10px');
+      }
+
+      break;
+    }
+  });
+});
+</script>
+</body>
+</html>

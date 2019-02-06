@@ -1,0 +1,28 @@
+<head>
+  <meta charset="utf-8" />
+  <script src="asset/jquery.js"></script>
+  <title>Exercice 6</title>
+  <style #affiche="text/css">
+    input{
+      width: 50px;
+    }
+  </style>
+</head>
+<body>
+  <label>valeur :</label>
+  <input id="button1" type="button" value ="+"></input>
+    <input id="affiche" value="0"></input>
+  <input id="button2" type="button" value ="-"></input>
+<script>
+var count = 0;
+  $("#button1").click(function() {
+    count++;
+  $("#affiche").val(count);
+  });
+  $("#button2").click(function() {
+      count--;
+    $("#affiche").val(count);
+    });
+</script>
+</body>
+</html>

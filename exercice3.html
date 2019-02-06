@@ -1,0 +1,29 @@
+<head>
+  <meta charset="utf-8" />
+  <script src="asset/jquery.js"></script>
+  <title>Exercice 3</title>
+</head>
+<body>
+  <h4>Entre un nombre entre 0 et 100</h4>
+  <input id="button1" type="button" value ="play" />
+    <input id="affiche" value="0" />
+<script>
+//definition nombre alétoire
+result= Math.floor(Math.random()*101);
+//possibilités
+tryCount=0;
+$('#button1').click(function(event){
+  tryCount++;
+  if ($('#affiche').val()==result){
+    alert('correct '+tryCount);
+  }else if($('#affiche').val()<result){
+    alert('plus');
+  }else if($('#affiche').val()>result){
+    alert('moins');
+  }else {
+    alert('c\'est pas un nombre')
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <script src="asset/jquery.js"></script>
+  <title>Exercice 6</title>
+  <style>
+  #rectangle{
+    width: 50px;
+    height:50px;
+    border:9px solid #ab2609;
+    border-radius: 50px;
+    margin-top: 5%;
+  }
+  .button{
+    margin-left: 40%;
+    margin-top:5%;
+  }
+</style>
+</head>
+<body>
+  <div class="button">
+    <input id="size" type="button" value="taille"></input>
+    <input id="green" type="button" value="couleur" ></input>
+    <input id="color" type="button" value="origine"></input>
+    <input id="hidden" type="button" value="invisible"></input>
+    <input id="show" type="button" value="visible"></input>
+  </div>
+  <div id="rectangle"></div>
+  <script>
+  $(function(){
+    $('#color').click(function(){
+      $('#rectangle').css('background-color', 'white');
+      $('#rectangle').css('border', '9px solid #ab2609');
+    });
+    $('#green').click(function(){
+      $('#rectangle').css('background-color', '#e70e0e');
+      $('#rectangle').css('border', '9px solid #f53b11');
+    });
+    $('#hidden').click(function(){
+      $('#rectangle').hide();
+    });
+    $('#show').click(function(){
+      $('#rectangle').show();
+    });
+    $('#size').click(function(){
+      if ($('#rectangle').height() < 1000) {
+      $('#rectangle').height($('#rectangle').height()+20);
+    } else {
+      $('#rectangle').css('height' , '100px')
+      }
+      if ($('#rectangle').width() < 1000) {
+      $('#rectangle').width($('#rectangle').width()+20);
+    } else {
+      $('#rectangle').css('width' , '100px')
+      }
+        });
+});
+</script>
+</body>
+</html>
